@@ -3,16 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Story 2 – Women’s Wrestling in the 21st Century</title>
+<title>Women’s Wrestling Story</title>
+
 <style>
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #fff;
+    background: #fafafa;
     color: #222;
 }
 
-/* TOP BAR */
+h1, h2 {
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+h1 { font-size: 3em; text-align: center; }
+h2 { font-size: 1.6em; text-align: center; margin: 40px 0; }
+
+p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.section {
+    width: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+
+.section.white { background: #fff; color: #222; }
+.section.black { background: #111; color: #fff; }
+.section.black p { color: #ddd; }
+
+.split {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.split.reverse { flex-direction: row-reverse; }
+
+.text-side, .visual-side {
+    flex: 1 1 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-side { font-size: 1.15em; line-height: 1.8; }
+
+.visual-side { padding: 20px; display: flex; align-items: center; justify-content: center; }
+
+.visual-side .flourish-embed, 
+.full-visual .flourish-embed {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+}
+
+.full-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 900px) {
+    .split, .split.reverse {
+        flex-direction: column;
+    }
+    .text-side, .visual-side { flex: 1 1 100%; padding: 20px; }
+}
+
 .top-bar {
     position: fixed;
     top: 10px;
@@ -22,92 +99,13 @@ body {
     font-family: Arial, sans-serif;
     z-index: 9999;
 }
+
 .top-left { position: absolute; left: 10px; }
 .top-center { text-align: center; width: 100%; }
 .top-right { position: absolute; right: 10px; top: 0; }
-
-/* SECTION STYLES */
-.section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 60px 0;
-    box-sizing: border-box;
-}
-
-.section.white { background: #fff; color: #222; }
-.section.black { background: #111; color: #fff; }
-.section.black p { color: #ddd; }
-
-/* HEADINGS */
-h1, h2 { margin: 0 0 30px 0; text-align: center; }
-h1 { font-size: 3em; font-weight: 700; }
-h2 { font-size: 1.8em; margin-bottom: 40px; }
-
-/* TEXT */
-p {
-    font-size: 1.15em;
-    line-height: 1.75;
-    max-width: 800px;
-    margin: 0 auto 25px auto;
-}
-
-/* SPLIT SECTIONS FULL WIDTH VISUALS */
-.split {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.split.reverse { flex-direction: row-reverse; }
-
-.text-side {
-    flex: 1 1 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.visual-side {
-    flex: 1 1 50%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.visual-side .flourish-embed,
-.visual-side .visual-box,
-.full-visual {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-}
-
-/* FULL WIDTH VISUALS */
-.full-visual {
-    display: flex;
-    justify-content: center;
-}
-
-/* ANIMATION */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.9s ease;
-}
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* RESPONSIVE */
-@media(max-width: 900px) {
-    .split { flex-direction: column; }
-    .text-side, .visual-side { flex: 1 1 100%; padding: 20px; }
-}
 </style>
 </head>
+
 <body>
 
 <div class="top-bar">
@@ -120,102 +118,122 @@ p {
     <div class="top-right">STORY 2</div>
 </div>
 
-<!-- VISUAL 1 – WHITE BACKGROUND FULL WIDTH -->
+<!-- Hero Section -->
+<div class="section white reveal">
+    <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
+    <p>
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal, being responsible for much of the legendary trivia at wrestling’s foundational roots. This would lay the groundwork for stars to take the sport into the 21st century like John Cena, becoming a household name and growing the industry massively as we entered the digital age.
+
+However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025. This revolution would see all different types of women be featured much more prominently, being valued for their talents and unique character rather than looks and being positioned as main event talents rather than undercard acts.
+
+This article will cover changes in the WWE (World Wrestling Entertainment) and recently created AEW (All-Elite Wrestling).
+    </p>
+</div>
+
+<!-- VISUAL 1 Full Screen -->
 <div class="section white reveal full-visual">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/28024773"></div>
-</div>
-<div class="section white reveal">
-    <p>Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company. At the beginning of 2016 there were 39 signed female wrestlers, and by 2026 there are now 67. This shows a nearly 79% increase. These stats come from the Smackdown Hotel Roster Database.</p>
+    <div class="flourish-embed" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- VISUAL 2 – WHITE BACKGROUND, Visual LEFT, Text RIGHT -->
+<!-- VISUAL 2 Split Left Visual -->
 <div class="section white reveal">
     <div class="split">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/27677179"></div>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/27677179"></div>
         </div>
         <div class="text-side">
-            <p>During this boom of women’s wrestling, AEW was formed in 2019. Its women’s division increased from 14 signed women in 2019 to 56 in 2026, showing a 300% growth over 7 years. These stats come from the Smackdown Hotel Roster Database.</p>
+            <p>
+Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company. It is found that at the beginning of 2016 there were 39 signed female wrestlers and now in 2026 there are now 67 signed. This shows a nearly 79% increase. These stats come from the Smackdown Hotel Roster Database.
+            </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 3 – BLACK BACKGROUND, Text LEFT, Visual RIGHT -->
+<!-- VISUAL 3 Black Background, Right Visual -->
 <div class="section black reveal">
     <div class="split reverse">
-        <div class="text-side">
-            <p>Female stars like Trish Stratus, Lita, and Chyna broke into the main event scene despite the male-dominated era of the late 90’s and early 2000’s. They laid the foundations for modern women’s wrestling.</p>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28122283"></div>
+        <div class="text-side">
+            <p>
+During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed to rival the WWE’s longstanding monopoly on the wrestling industry. Its women’s division increased from 14 signed women in 2019 to 56 in 2026, showing a 300% growth over 7 years. These stats come from the Smackdown Hotel Roster Database.
+            </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 4 – WHITE BACKGROUND FULL WIDTH -->
+<!-- VISUAL 4 Full Screen -->
 <div class="section white reveal full-visual">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/28085202"></div>
-</div>
-<div class="section white reveal">
-    <p>In the 2020s, athletes like Rhea Ripley have broken out as worldwide stars. Social media metrics show 7 of the most followed active wrestlers are women as of 2026.</p>
+    <div class="flourish-embed" data-src="visualisation/28085202"></div>
 </div>
 
-<!-- VISUAL 5 – WHITE BACKGROUND, Visual LEFT, Text RIGHT -->
-<div class="section white reveal">
-    <div class="split reverse">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28087074"></div>
-        </div>
-        <div class="text-side">
-            <p>Despite the expansion of women’s wrestling, only 33% of WWE signed talent are women as of 2026. These stats come from the Smackdown Hotel Roster Database.</p>
-        </div>
-    </div>
-</div>
-
-<!-- VISUAL 6 – WHITE BACKGROUND, Text LEFT, Visual RIGHT -->
+<!-- VISUAL 5 Split Left Visual -->
 <div class="section white reveal">
     <div class="split">
-        <div class="text-side">
-            <p>Within AEW, women only make up 24% of the roster in 2026. This shows ongoing inequality in the industry.</p>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28087074"></div>
         </div>
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/27918499"></div>
+        <div class="text-side">
+            <p>
+In the 2020s, athletes like Rhea Ripley have broken out into a new level of audience as worldwide stars. A massive wrestling boom took place over 2021–2023. This is reflected in social media where 7 of the most followed active wrestlers are women as of 2026.
+            </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 7 – BLACK BACKGROUND, Visual LEFT, Text RIGHT -->
-<div class="section black reveal">
-    <div class="split reverse">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28122168"></div>
-        </div>
-        <div class="text-side">
-            <p>Inequality is evident not just in roster ratios but also in match appearances and total screen time between men and women.</p>
-        </div>
-    </div>
-</div>
-
-<!-- VISUAL 8 – WHITE BACKGROUND, Text LEFT, Visual RIGHT -->
+<!-- VISUAL 6 Split Right Visual -->
 <div class="section white reveal">
     <div class="split reverse">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28079741"></div>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/27918499"></div>
         </div>
         <div class="text-side">
-            <p>AEW shows stagnation in women’s ring match time, with little growth from 2022–2025.</p>
+            <p>
+Despite expansion, only 33% of WWE talent are women in 2026. AEW only has 24% female talent. Inequality persists.
+            </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 9 – BLACK BACKGROUND, Text LEFT, Visual RIGHT -->
+<!-- VISUAL 7 Black Split -->
 <div class="section black reveal">
     <div class="split">
-        <div class="text-side">
-            <p>Women’s match times remain largely unchanged, reflecting slow progress in AEW.</p>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28122168"></div>
         </div>
-        <div class="visual-side visual-box">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/28084586"></div>
+        <div class="text-side">
+            <p>
+Inequality is evident in roster ratios and match appearances, with women receiving fewer matches and less screen time across WWE and AEW.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- VISUAL 8 Split Right -->
+<div class="section white reveal">
+    <div class="split reverse">
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28079741"></div>
+        </div>
+        <div class="text-side">
+            <p>
+AEW shows stagnation in women’s ring match time from 2022–2025, reflecting complacency towards female progress.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- VISUAL 9 Black Split -->
+<div class="section black reveal">
+    <div class="split">
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28084586"></div>
+        </div>
+        <div class="text-side">
+            <p>
+Women’s matches remain largely unchanged in duration, showing slow progress in AEW.
+            </p>
         </div>
     </div>
 </div>
