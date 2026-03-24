@@ -32,7 +32,6 @@ body {
 /* === SECTIONS === */
 .section {
     width: 100%;
-    padding: 60px 0;
     display: flex;
     flex-direction: column;
 }
@@ -82,6 +81,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* FULL SCREEN HEIGHT */
 }
 
 .visual-box {
@@ -103,12 +103,13 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px 0;
+    min-height: 100vh; /* FULL SCREEN HEIGHT */
 }
 
 .full-visual .flourish-embed {
     width: 100%;
     max-width: 1200px;
+    height: 100%;
 }
 
 /* === ANIMATION === */
@@ -131,6 +132,10 @@ p {
     .text-side, .visual-side {
         flex: 1 1 100%;
         padding: 20px;
+        min-height: auto;
+    }
+    .full-visual {
+        min-height: 400px;
     }
 }
 </style>
@@ -156,12 +161,12 @@ Over the last 40 years, the world of professional wrestling has grown into a wor
     </p>
 </div>
 
-<!-- TIMELINE FULL WIDTH -->
+<!-- TIMELINE FULL SCREEN -->
 <div class="section white reveal full-visual">
     <div class="flourish-embed" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- SPLIT: VISUAL LEFT / TEXT RIGHT -->
+<!-- SPLIT SECTIONS -->
 <div class="section white reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -175,7 +180,6 @@ Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive i
     </div>
 </div>
 
-<!-- SPLIT: BLACK BACKGROUND, TEXT LEFT / VISUAL RIGHT -->
 <div class="section black reveal">
     <div class="split">
         <div class="text-side">
@@ -189,14 +193,12 @@ During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was f
     </div>
 </div>
 
-<!-- FULL WIDTH VISUAL -->
 <div class="section white reveal full-visual">
     <div class="visual-box">
         <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
 
-<!-- ADDITIONAL SPLIT SECTIONS -->
 <div class="section white reveal">
     <div class="split">
         <div class="visual-side visual-box">
