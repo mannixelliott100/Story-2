@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #fff; /* page background white */
+    background: #fff;
     color: #222;
     line-height: 1.7;
 }
@@ -44,21 +44,13 @@ body {
     width: 100%;
     min-height: 100vh; /* full viewport height */
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 0;
+    align-items: center;
 }
 
-.section.white {
-    background: #fff;
-    color: #222;
-}
-
-.section.black {
-    background: #111;
-    color: #fff;
-}
-
+.section.white { background: #fff; color: #222; }
+.section.black { background: #111; color: #fff; }
 .section.black p { color: #ddd; }
 
 /* SPLIT LAYOUT */
@@ -66,7 +58,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* prevent squeezing */
 }
 
 .split.reverse {
@@ -87,9 +79,15 @@ body {
 }
 
 /* FULLSCREEN VISUALS */
+.visual-side {
+    width: 100%;
+    height: 100%;
+}
+
 .visual-side .flourish-embed {
     width: 100% !important;
     height: 100% !important;
+    min-height: 80vh; /* ensures full height */
 }
 
 /* HERO TEXT */
@@ -106,26 +104,8 @@ h1, h2 {
     margin: 20px 0;
 }
 
-h1 {
-    font-size: 3em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-    .split {
-        flex-direction: column;
-    }
-    .text-side, .visual-side {
-        width: 100%;
-        padding: 20px;
-    }
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.6em; }
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
 
 /* ANIMATION */
 .reveal {
@@ -138,11 +118,35 @@ h2 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Remove .visual-box effects if present */
+.visual-box {
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .split {
+        flex-direction: column;
+    }
+    .text-side, .visual-side {
+        width: 100%;
+        padding: 20px;
+    }
+    .visual-side .flourish-embed { min-height: 60vh; }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.6em; }
+}
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top-bar">
     <div>202226944</div>
     <div class="top-center">
@@ -158,10 +162,10 @@ h2 {
     <div class="hero-text">
         <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
         <p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal. This would lay the groundwork for stars to take the sport into the 21st century like John Cena. 
+Over the last 40 years, professional wrestling has grown into a worldwide phenomenon, forming a key part of pop culture. Icons like Hulk Hogan, Stone Cold, and The Rock brought wrestling into mainstream popularity, setting the stage for stars like John Cena in the 21st century.
         </p>
         <p>
-However, as the industry grew, it remained focused on male talent while female wrestlers were often misrepresented. The 2010’s saw the creation of an all-female division and eventually “The Women’s Revolution” in 2025, valuing talent and character over looks and positioning women as main-event stars.
+However, female wrestlers were often misrepresented until the 2010s, when an all-female division emerged and eventually led to “The Women’s Revolution” of 2025, valuing talent and character over looks, positioning women as main-event stars.
         </p>
     </div>
 </div>
@@ -181,7 +185,7 @@ However, as the industry grew, it remained focused on male talent while female w
         </div>
         <div class="text-side">
             <p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in female talent, growing from 39 signed women in 2016 to 67 in 2026 — nearly 79% increase.
+Since the 2015 “Women’s Revolution,” WWE has seen a steadily positive increase in female talent, growing from 39 signed women in 2016 to 67 in 2026 — nearly 79% increase.
             </p>
         </div>
     </div>
@@ -190,24 +194,25 @@ Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive i
 <!-- VISUALISATION 3 - BLACK -->
 <div class="section black reveal">
     <div class="split">
-        <div class="visual-side">
-            <div class="flourish-embed" data-src="visualisation/28122283"></div>
-        </div>
         <div class="text-side">
             <p>
 In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s division which grew from 14 to 56 signed women by 2026 — a 300% increase over 7 years.
             </p>
         </div>
+        <div class="visual-side">
+            <div class="flourish-embed" data-src="visualisation/28122283"></div>
+        </div>
     </div>
 </div>
 
-<!-- MORE VISUALS -->
+<!-- VISUAL 4 -->
 <div class="section white reveal">
     <div class="visual-side">
         <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
 
+<!-- VISUAL 5 -->
 <div class="section white reveal">
     <div class="split">
         <div class="visual-side">
@@ -215,12 +220,13 @@ In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s 
         </div>
         <div class="text-side">
             <p>
-Athletes like Rhea Ripley have become worldwide stars, reflecting a boom in women’s wrestling post-2020. Social media shows 7 of the top followed wrestlers in 2026 are women.
+Athletes like Rhea Ripley became worldwide stars, reflecting a boom in women’s wrestling post-2020. Social media shows 7 of the top-followed wrestlers in 2026 are women.
             </p>
         </div>
     </div>
 </div>
 
+<!-- VISUAL 6 - BLACK -->
 <div class="section black reveal">
     <div class="split reverse">
         <div class="visual-side">
@@ -228,12 +234,13 @@ Athletes like Rhea Ripley have become worldwide stars, reflecting a boom in wome
         </div>
         <div class="text-side">
             <p>
-Despite growth, inequality persists: only 33% of WWE signed talent are women in 2026, highlighting continued disparity.
+Despite growth, inequality persists: only 33% of WWE signed talent are women in 2026.
             </p>
         </div>
     </div>
 </div>
 
+<!-- VISUAL 7 - BLACK -->
 <div class="section black reveal">
     <div class="split">
         <div class="visual-side">
@@ -241,7 +248,7 @@ Despite growth, inequality persists: only 33% of WWE signed talent are women in 
         </div>
         <div class="text-side">
             <p>
-AEW shows even larger divide: only 24% women signed (52 women vs 163 men) as of 2026.
+AEW shows an even larger divide: only 24% of signed talent are women (52 women vs 163 men) as of 2026.
             </p>
         </div>
     </div>
@@ -260,5 +267,6 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
