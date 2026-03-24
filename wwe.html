@@ -6,7 +6,6 @@
 <title>Women’s Wrestling Story</title>
 
 <style>
-/* === BASIC BODY === */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -14,7 +13,7 @@ body {
     color: #222;
 }
 
-/* === TOP BAR === */
+/* TOP BAR */
 .top-bar {
     position: fixed;
     top: 10px;
@@ -29,9 +28,10 @@ body {
 .top-center { text-align: center; width: 100%; }
 .top-right { position: absolute; right: 10px; top: 0; }
 
-/* === SECTIONS === */
+/* SECTION STYLES */
 .section {
     width: 100%;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
 }
@@ -40,16 +40,16 @@ body {
 .section.black { background: #111; color: #fff; }
 .section.black p { color: #ddd; }
 
-/* === HERO TITLES === */
+/* HEADINGS */
 h1, h2 {
     margin: 0 0 30px 0;
     text-align: center;
 }
 
 h1 { font-size: 3em; color: #1e66ff; font-weight: 700; }
-h2 { font-size: 1.8em; color: #1e66ff; margin-bottom: 40px; }
+h2 { font-size: 1.8em; margin-bottom: 40px; }
 
-/* === TEXT === */
+/* TEXT */
 p {
     font-size: 1.1em;
     line-height: 1.75;
@@ -57,7 +57,7 @@ p {
     margin: 0 auto 25px auto;
 }
 
-/* === SPLIT SECTIONS === */
+/* SPLIT SECTIONS */
 .split {
     display: flex;
     width: 100%;
@@ -81,38 +81,26 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* FULL SCREEN HEIGHT */
 }
 
 .visual-box {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 1200px;
 }
 
-.visual-box iframe,
-.visual-box .flourish-embed {
-    width: 100%;
-    height: 100%;
-}
-
-/* === FULL WIDTH VISUALS === */
+/* FULL WIDTH VISUALS */
 .full-visual {
     width: 100%;
     display: flex;
     justify-content: center;
-    min-height: 100vh; /* FULL SCREEN HEIGHT */
 }
 
 .full-visual .flourish-embed {
     width: 100%;
     max-width: 1200px;
-    height: 100%;
 }
 
-/* === ANIMATION === */
+/* ANIMATION */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -124,7 +112,7 @@ p {
     transform: translateY(0);
 }
 
-/* === RESPONSIVE === */
+/* RESPONSIVE */
 @media(max-width: 900px) {
     .split {
         flex-direction: column;
@@ -132,17 +120,12 @@ p {
     .text-side, .visual-side {
         flex: 1 1 100%;
         padding: 20px;
-        min-height: auto;
-    }
-    .full-visual {
-        min-height: 400px;
     }
 }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-left">202226944</div>
     <div class="top-center">
@@ -153,20 +136,20 @@ p {
     <div class="top-right">STORY 2</div>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div class="section white reveal">
     <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
     <p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture...
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon...
     </p>
 </div>
 
-<!-- TIMELINE FULL SCREEN -->
+<!-- TIMELINE FULL WIDTH -->
 <div class="section white reveal full-visual">
     <div class="flourish-embed" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- SPLIT SECTIONS -->
+<!-- SPLIT EXAMPLE -->
 <div class="section white reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -174,7 +157,7 @@ Over the last 40 years, the world of professional wrestling has grown into a wor
         </div>
         <div class="text-side">
             <p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company...
+Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in female talent...
             </p>
         </div>
     </div>
@@ -184,82 +167,11 @@ Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive i
     <div class="split">
         <div class="text-side">
             <p>
-During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed to rival the WWE’s longstanding monopoly...
+During this boom, AEW was formed to rival the WWE’s monopoly...
             </p>
         </div>
         <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/28122283"></div>
-        </div>
-    </div>
-</div>
-
-<div class="section white reveal full-visual">
-    <div class="visual-box">
-        <div class="flourish-embed" data-src="visualisation/28085202"></div>
-    </div>
-</div>
-
-<div class="section white reveal">
-    <div class="split">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed" data-src="visualisation/28087074"></div>
-        </div>
-        <div class="text-side">
-            <p>
-In the 2020’s, athletes like Rhea Ripley have broken out into a new level of audience as a worldwide international star...
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="section white reveal">
-    <div class="split reverse">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed" data-src="visualisation/27918499"></div>
-        </div>
-        <div class="text-side">
-            <p>
-However, despite the newly found star power and expansion of women’s wrestling across multiple WWE brands...
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="section black reveal">
-    <div class="split">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed" data-src="visualisation/28122168"></div>
-        </div>
-        <div class="text-side">
-            <p>
-Within AEW, this divide is even larger with only 24% of women being signed to the roster...
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="section white reveal">
-    <div class="split reverse">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed" data-src="visualisation/28079741"></div>
-        </div>
-        <div class="text-side">
-            <p>
-This inequality is also revealed not just within their roster’s ratio of men and women...
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="section black reveal">
-    <div class="split">
-        <div class="visual-side visual-box">
-            <div class="flourish-embed" data-src="visualisation/28084586"></div>
-        </div>
-        <div class="text-side">
-            <p>
-Additionally, the stagnation of progress has also become apparent within the last few years...
-            </p>
         </div>
     </div>
 </div>
