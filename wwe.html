@@ -11,8 +11,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fafafa;
     color: #222;
-    padding-top: 50px;
-    overflow-x: hidden; /* prevent horizontal scroll */
+    padding-top: 60px;
 }
 
 h1, h2 { color: #1e66ff; font-weight: 700; }
@@ -34,11 +33,12 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
 .top-center { flex: 1 1 auto; text-align: center; }
 .top-center img { height: 25px; }
 
-/* --- SECTIONS --- */
+/* --- SECTION CONTAINER --- */
 .section {
-    padding: 60px 5vw; /* horizontal spacing with viewport units */
-    width: 100vw;
+    padding: 60px 20px;
     box-sizing: border-box;
+    max-width: 1100px; /* center everything inside this width */
+    margin: 0 auto;
 }
 .section.white { background: #fff; }
 .section.black { background: #111; color: #fff; }
@@ -48,27 +48,22 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
 .split {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    gap: 2vw; /* space between columns */
-    justify-content: flex-start; /* align to left */
+    justify-content: space-between; /* space between columns */
     align-items: flex-start;
+    gap: 20px;
 }
 .split.reverse { flex-direction: row-reverse; }
 
 .visual-side, .text-side {
-    flex: 1 1 48%; /* each takes ~half width */
+    flex: 1 1 48%; /* roughly half each */
+    min-width: 300px; 
     box-sizing: border-box;
-    min-width: 300px; /* prevents collapsing */
-    margin: 0; /* remove centering */
 }
 
 .visual-box, .full-visual {
     width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border-radius: 0;
-    box-shadow: none;
 }
 
 .section.black .visual-box { background: #111; }
