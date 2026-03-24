@@ -184,14 +184,14 @@ This article will cover changes in the WWE (World Wrestling Entertainment) and r
 
 <div class="section white reveal">
     <h2 class="center-heading">Timeline of Women’s Wrestling</h2>
-    <div class="visual-box full-visual">
+    <div class= "full-visual">
         <div class="flourish-embed" data-src="visualisation/28024773"></div>
     </div>
 </div>
 
 <div class="section white reveal">
     <div class="split">
-        <div class="visual-side visual-box">
+       <div class="container split reverse">
             <div class="flourish-embed" data-src="visualisation/27677179"></div>
         </div>
         <div class="text-side">
