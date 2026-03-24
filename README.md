@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>WWE Story</title>
+<title>Women’s Wrestling Story</title>
 
 <style>
 
@@ -15,19 +15,20 @@ body {
 /* SECTIONS */
 .section {
     width: 100%;
-    padding: 70px 0;
+    padding: 80px 0;
 }
 
+/* FULL WIDTH CONTAINER */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 /* BACKGROUNDS */
 .white { background: #fff; }
 .black { background: #111; color: #fff; }
-.black p { color: #ddd; }
 
 /* TITLE */
 .title {
@@ -41,28 +42,28 @@ body {
 p {
     font-size: 1.15em;
     line-height: 1.8;
+    margin: 0;
 }
 
-/* SPLIT LAYOUT (IDENTICAL TO UFC) */
+/* SPLIT LAYOUT */
 .split {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
 }
 
 .split.reverse {
     flex-direction: row-reverse;
 }
 
+/* FORCE TRUE 50/50 LAYOUT */
 .text, .visual {
     flex: 1;
 }
 
+/* VISUAL BOX */
 .visual-box {
-    background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 /* FULL WIDTH VISUAL */
@@ -70,175 +71,197 @@ p {
     width: 100%;
 }
 
+/* FLOURISH FIX */
+.flourish-embed {
+    width: 100% !important;
+}
+
 /* RESPONSIVE */
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     .split {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 }
+
+/* HEADER */
+.top-bar {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    z-index: 9999;
+}
+
+.top-left { position: absolute; left: 10px; }
+.top-center { text-align: center; width: 100%; }
+.top-right { position: absolute; right: 10px; }
 
 </style>
 </head>
 
 <body>
 
+<div class="top-bar">
+    <div class="top-left">202226944</div>
+    <div class="top-center">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" style="height:25px;">
+    </div>
+    <div class="top-right">STORY 2</div>
+</div>
+
 <!-- TITLE -->
 <div class="section white">
-<div class="container">
-<h1 class="title">Story 2 – THE RISE OF WOMENS WRESTLING IN THE 21ST CENTURY</h1>
-</div>
+    <div class="container">
+        <h1 class="title">Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
+    </div>
 </div>
 
 <!-- INTRO -->
 <div class="section white">
-<div class="container">
-
-<p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal, being responsible for much of the legendary trivia at wrestling’s foundational roots. This would lay the groundwork for stars to take the sport into the 21’st century like John Cena, becoming a household name and growing the industry massively as we entered the digital age.
-</p>
-
-<p>
-However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025.
-</p>
-
-<p>
-This article will cover changes in the WWE and AEW.
-</p>
-
-</div>
+    <div class="container">
+        <p>
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture...
+        </p>
+        <p>
+However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented...
+        </p>
+    </div>
 </div>
 
-<!-- VISUAL 1 (FULL WIDTH) -->
+<!-- VIS 1 FULL -->
 <div class="section white">
-<div class="container">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28024773"></div>
-</div>
+    <div class="container">
+        <div class="visual-box full-width">
+            <div class="flourish-embed" data-src="visualisation/28024773"></div>
+        </div>
+    </div>
 </div>
 
-<!-- VISUAL 2 (LEFT VISUAL / RIGHT TEXT) -->
+<!-- VIS 2 LEFT / TEXT RIGHT -->
 <div class="section white">
-<div class="container split">
+    <div class="container split">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/27677179"></div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/27677179"></div>
+        </div>
+
+        <div class="text">
+            <p>
+Since the 2015 Women’s Revolution the WWE has seen a steadily positive increase...
+            </p>
+        </div>
+
+    </div>
 </div>
 
-<div class="text">
-<p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase...
-</p>
-</div>
-
-</div>
-</div>
-
-<!-- VISUAL 3 (TEXT LEFT / VISUAL RIGHT - BLACK) -->
+<!-- VIS 3 BLACK TEXT LEFT -->
 <div class="section black">
-<div class="container split reverse">
+    <div class="container split reverse">
 
-<div class="text">
-<p>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/28122283"></div>
+        </div>
+
+        <div class="text">
+            <p>
 During this boom of women’s wrestling, in 2019 AEW was formed...
-</p>
+            </p>
+        </div>
+
+    </div>
 </div>
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28122283"></div>
-</div>
-
-</div>
-</div>
-
-<!-- VISUAL 4 (FULL WIDTH) -->
+<!-- VIS 4 FULL -->
 <div class="section white">
-<div class="container">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28085202"></div>
-</div>
+    <div class="container">
+        <div class="flourish-embed full-width" data-src="visualisation/28085202"></div>
+    </div>
 </div>
 
-<!-- VISUAL 5 (LEFT VISUAL / RIGHT TEXT) -->
+<!-- VIS 5 LEFT -->
 <div class="section white">
-<div class="container split">
+    <div class="container split">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28087074"></div>
-</div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/28087074"></div>
+        </div>
 
-<div class="text">
-<p>
+        <div class="text">
+            <p>
 In the 2020’s, athletes like Rhea Ripley have broken out...
-</p>
+            </p>
+        </div>
+
+    </div>
 </div>
 
-</div>
-</div>
-
-<!-- VISUAL 6 (RIGHT VISUAL / LEFT TEXT) -->
+<!-- VIS 6 RIGHT -->
 <div class="section white">
-<div class="container split reverse">
+    <div class="container split reverse">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/27918499"></div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/27918499"></div>
+        </div>
+
+        <div class="text">
+            <p>
+However, despite the newly found star power there is inequality...
+            </p>
+        </div>
+
+    </div>
 </div>
 
-<div class="text">
-<p>
-However, despite the newly found star power...
-</p>
-</div>
-
-</div>
-</div>
-
-<!-- VISUAL 7 (LEFT VISUAL / RIGHT TEXT - BLACK) -->
+<!-- VIS 7 BLACK LEFT -->
 <div class="section black">
-<div class="container split">
+    <div class="container split">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28122168"></div>
-</div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/28122168"></div>
+        </div>
 
-<div class="text">
-<p>
+        <div class="text">
+            <p>
 Within AEW, this divide is even larger...
-</p>
+            </p>
+        </div>
+
+    </div>
 </div>
 
-</div>
-</div>
-
-<!-- VISUAL 8 (RIGHT VISUAL / LEFT TEXT) -->
+<!-- VIS 8 RIGHT -->
 <div class="section white">
-<div class="container split reverse">
+    <div class="container split reverse">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28079741"></div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/28079741"></div>
+        </div>
+
+        <div class="text">
+            <p>
+This inequality is also revealed in match appearances...
+            </p>
+        </div>
+
+    </div>
 </div>
 
-<div class="text">
-<p>
-This inequality is also revealed not just within their roster’s ratio...
-</p>
-</div>
-
-</div>
-</div>
-
-<!-- VISUAL 9 (LEFT VISUAL / RIGHT TEXT - BLACK) -->
+<!-- VIS 9 BLACK LEFT -->
 <div class="section black">
-<div class="container split">
+    <div class="container split">
 
-<div class="visual visual-box">
-<div class="flourish-embed flourish-chart" data-src="visualisation/28084586"></div>
-</div>
+        <div class="visual">
+            <div class="flourish-embed" data-src="visualisation/28084586"></div>
+        </div>
 
-<div class="text">
-<p>
-Additionally, the stagnation of progress has also became apparent...
-</p>
-</div>
+        <div class="text">
+            <p>
+Additionally, the stagnation of progress has become apparent...
+            </p>
+        </div>
 
-</div>
+    </div>
 </div>
 
 <script src="https://public.flourish.studio/resources/embed.js"></script>
