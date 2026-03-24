@@ -39,12 +39,11 @@ body {
     height: 25px;
 }
 
-/* SECTION STYLING */
+/* SECTIONS */
 .section {
     width: 100%;
-    min-height: 100vh; /* full viewport height */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -58,12 +57,10 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    flex-wrap: nowrap; /* prevent squeezing */
+    flex-wrap: nowrap;
 }
 
-.split.reverse {
-    flex-direction: row-reverse;
-}
+.split.reverse { flex-direction: row-reverse; }
 
 .text-side, .visual-side {
     flex: 1 1 50%;
@@ -73,12 +70,7 @@ body {
     padding: 40px;
 }
 
-.text-side p {
-    max-width: 600px;
-    font-size: 1.1em;
-}
-
-/* FULLSCREEN VISUALS */
+/* FULL-SIZE VISUALS */
 .visual-side {
     width: 100%;
     height: 100%;
@@ -87,7 +79,7 @@ body {
 .visual-side .flourish-embed {
     width: 100% !important;
     height: 100% !important;
-    min-height: 80vh; /* ensures full height */
+    min-height: 80vh;
 }
 
 /* HERO TEXT */
@@ -107,6 +99,20 @@ h1, h2 {
 h1 { font-size: 3em; }
 h2 { font-size: 2em; }
 
+/* REMOVE CONSTRAINTS */
+.container {
+    max-width: none;
+    padding: 0;
+}
+
+.visual-box {
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
 /* ANIMATION */
 .reveal {
     opacity: 0;
@@ -119,16 +125,7 @@ h2 { font-size: 2em; }
     transform: translateY(0);
 }
 
-/* Remove .visual-box effects if present */
-.visual-box {
-    padding: 0;
-    margin: 0;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-/* Responsive adjustments */
+/* RESPONSIVE */
 @media (max-width: 1000px) {
     .split {
         flex-direction: column;
@@ -162,25 +159,25 @@ h2 { font-size: 2em; }
     <div class="hero-text">
         <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
         <p>
-Over the last 40 years, professional wrestling has grown into a worldwide phenomenon, forming a key part of pop culture. Icons like Hulk Hogan, Stone Cold, and The Rock brought wrestling into mainstream popularity, setting the stage for stars like John Cena in the 21st century.
+Over the last 40 years, professional wrestling has grown into a worldwide phenomenon. Icons like Hulk Hogan, Stone Cold, and The Rock brought wrestling into mainstream popularity, setting the stage for stars like John Cena in the 21st century.
         </p>
         <p>
-However, female wrestlers were often misrepresented until the 2010s, when an all-female division emerged and eventually led to “The Women’s Revolution” of 2025, valuing talent and character over looks, positioning women as main-event stars.
+Female wrestlers were often misrepresented until the 2010s, when an all-female division emerged and eventually led to “The Women’s Revolution” of 2025, valuing talent and character over looks, positioning women as main-event stars.
         </p>
     </div>
 </div>
 
 <!-- TIMELINE VISUAL -->
 <div class="section white reveal">
-    <div class="visual-side">
+    <div class="visual-side full-width">
         <div class="flourish-embed" data-src="visualisation/28024773"></div>
     </div>
 </div>
 
-<!-- VISUALISATION 2 - WHITE -->
+<!-- VISUAL 2 - WHITE -->
 <div class="section white reveal">
     <div class="split reverse">
-        <div class="visual-side">
+        <div class="visual-side full-width">
             <div class="flourish-embed" data-src="visualisation/27677179"></div>
         </div>
         <div class="text-side">
@@ -191,7 +188,7 @@ Since the 2015 “Women’s Revolution,” WWE has seen a steadily positive incr
     </div>
 </div>
 
-<!-- VISUALISATION 3 - BLACK -->
+<!-- VISUAL 3 - BLACK -->
 <div class="section black reveal">
     <div class="split">
         <div class="text-side">
@@ -199,7 +196,7 @@ Since the 2015 “Women’s Revolution,” WWE has seen a steadily positive incr
 In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s division which grew from 14 to 56 signed women by 2026 — a 300% increase over 7 years.
             </p>
         </div>
-        <div class="visual-side">
+        <div class="visual-side full-width">
             <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
     </div>
@@ -207,7 +204,7 @@ In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s 
 
 <!-- VISUAL 4 -->
 <div class="section white reveal">
-    <div class="visual-side">
+    <div class="visual-side full-width">
         <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
@@ -215,7 +212,7 @@ In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s 
 <!-- VISUAL 5 -->
 <div class="section white reveal">
     <div class="split">
-        <div class="visual-side">
+        <div class="visual-side full-width">
             <div class="flourish-embed" data-src="visualisation/28087074"></div>
         </div>
         <div class="text-side">
@@ -229,7 +226,7 @@ Athletes like Rhea Ripley became worldwide stars, reflecting a boom in women’s
 <!-- VISUAL 6 - BLACK -->
 <div class="section black reveal">
     <div class="split reverse">
-        <div class="visual-side">
+        <div class="visual-side full-width">
             <div class="flourish-embed" data-src="visualisation/27918499"></div>
         </div>
         <div class="text-side">
@@ -243,7 +240,7 @@ Despite growth, inequality persists: only 33% of WWE signed talent are women in 
 <!-- VISUAL 7 - BLACK -->
 <div class="section black reveal">
     <div class="split">
-        <div class="visual-side">
+        <div class="visual-side full-width">
             <div class="flourish-embed" data-src="visualisation/28122168"></div>
         </div>
         <div class="text-side">
