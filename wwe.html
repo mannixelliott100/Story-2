@@ -2,94 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Women’s Wrestling Story</title>
+<title>WWE Story</title>
 
 <style>
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f5;
 }
 
-/* FULL WIDTH SECTIONS */
+/* SECTIONS */
 .section {
     width: 100%;
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* BACKGROUNDS */
 .white { background: #fff; }
 .black { background: #111; color: #fff; }
 .black p { color: #ddd; }
 
-/* CONTENT WIDTH */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 800;
+    color: #1e66ff;
 }
 
 /* TEXT */
 p {
-    max-width: 700px;
-    line-height: 1.7;
+    font-size: 1.15em;
+    line-height: 1.8;
 }
 
-/* FLEX LAYOUT */
-.row {
+/* SPLIT LAYOUT (IDENTICAL TO UFC) */
+.split {
     display: flex;
-    gap: 40px;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.reverse {
+.split.reverse {
     flex-direction: row-reverse;
 }
 
 .text, .visual {
-    flex: 1 1 500px;
+    flex: 1;
 }
 
-/* FLOURISH FIX */
-.flourish-embed,
-.flourish-embed iframe {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-.flourish-embed iframe {
-    min-height: 500px;
+.visual-box {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* FULL WIDTH VISUAL */
-.full {
+.full-width {
     width: 100%;
 }
 
-/* MOBILE */
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column !important;
+/* RESPONSIVE */
+@media(max-width: 800px) {
+    .split {
+        flex-direction: column;
     }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- TITLE -->
+<div class="section white">
+<div class="container">
+<h1 class="title">Story 2 – THE RISE OF WOMENS WRESTLING IN THE 21ST CENTURY</h1>
+</div>
+</div>
+
 <!-- INTRO -->
 <div class="section white">
 <div class="container">
-
-<h1>Story 2 – THE RISE OF WOMENS WRESTLING IN THE 21ST CENTURY</h1>
 
 <p>
 Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal, being responsible for much of the legendary trivia at wrestling’s foundational roots. This would lay the groundwork for stars to take the sport into the 21’st century like John Cena, becoming a household name and growing the industry massively as we entered the digital age.
 </p>
 
 <p>
-However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025. This revolution would see all different types of women be featured much more prominently.
+However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025.
 </p>
 
 <p>
@@ -108,9 +117,9 @@ This article will cover changes in the WWE and AEW.
 
 <!-- VISUAL 2 (LEFT VISUAL / RIGHT TEXT) -->
 <div class="section white">
-<div class="container row">
+<div class="container split">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27677179"></div>
 </div>
 
@@ -123,9 +132,9 @@ Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive i
 </div>
 </div>
 
-<!-- VISUAL 3 (BLACK, TEXT LEFT / VISUAL RIGHT) -->
+<!-- VISUAL 3 (TEXT LEFT / VISUAL RIGHT - BLACK) -->
 <div class="section black">
-<div class="container row">
+<div class="container split reverse">
 
 <div class="text">
 <p>
@@ -133,7 +142,7 @@ During this boom of women’s wrestling, in 2019 AEW was formed...
 </p>
 </div>
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/28122283"></div>
 </div>
 
@@ -149,9 +158,9 @@ During this boom of women’s wrestling, in 2019 AEW was formed...
 
 <!-- VISUAL 5 (LEFT VISUAL / RIGHT TEXT) -->
 <div class="section white">
-<div class="container row">
+<div class="container split">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/28087074"></div>
 </div>
 
@@ -166,9 +175,9 @@ In the 2020’s, athletes like Rhea Ripley have broken out...
 
 <!-- VISUAL 6 (RIGHT VISUAL / LEFT TEXT) -->
 <div class="section white">
-<div class="container row reverse">
+<div class="container split reverse">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/27918499"></div>
 </div>
 
@@ -181,11 +190,11 @@ However, despite the newly found star power...
 </div>
 </div>
 
-<!-- VISUAL 7 (BLACK LEFT VISUAL / RIGHT TEXT) -->
+<!-- VISUAL 7 (LEFT VISUAL / RIGHT TEXT - BLACK) -->
 <div class="section black">
-<div class="container row">
+<div class="container split">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/28122168"></div>
 </div>
 
@@ -200,9 +209,9 @@ Within AEW, this divide is even larger...
 
 <!-- VISUAL 8 (RIGHT VISUAL / LEFT TEXT) -->
 <div class="section white">
-<div class="container row reverse">
+<div class="container split reverse">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/28079741"></div>
 </div>
 
@@ -215,11 +224,11 @@ This inequality is also revealed not just within their roster’s ratio...
 </div>
 </div>
 
-<!-- VISUAL 9 (BLACK LEFT VISUAL / RIGHT TEXT) -->
+<!-- VISUAL 9 (LEFT VISUAL / RIGHT TEXT - BLACK) -->
 <div class="section black">
-<div class="container row">
+<div class="container split">
 
-<div class="visual">
+<div class="visual visual-box">
 <div class="flourish-embed flourish-chart" data-src="visualisation/28084586"></div>
 </div>
 
