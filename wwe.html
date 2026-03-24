@@ -6,135 +6,76 @@
 <title>Women’s Wrestling Story</title>
 
 <style>
-/* --- GLOBAL --- */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fafafa;
     color: #222;
-    padding-top: 50px; /* space for fixed header */
+    padding-top: 50px;
     overflow-x: hidden;
 }
 
-h1, h2 {
-    color: #1e66ff;
-    font-weight: 700;
-}
+h1, h2 { color: #1e66ff; font-weight: 700; }
+h1 { font-size: 3em; text-align: center; margin-bottom: 30px; }
+h2 { font-size: 1.6em; text-align: center; margin: 60px 0 15px; }
 
-h1 {
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 1.6em;
-    margin: 60px 0 15px;
-    text-align: center;
-}
-
-p {
-    font-size: 1.08em;
-    line-height: 1.75;
-    color: #444;
-    margin: 0 0 25px 0;
-}
-
-.hero-text {
-    font-size: 1.15em;
-    line-height: 1.8;
-    color: #333;
-}
+p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
+.hero-text { font-size: 1.15em; line-height: 1.8; color: #333; }
 
 /* --- HEADER --- */
 .top-bar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
-    z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    top: 0; left: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    background: #fff; padding: 5px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 9999; box-sizing: border-box;
 }
-
-.top-left, .top-right {
-    flex: 0 0 auto;
-}
-
-.top-center {
-    flex: 1 1 auto;
-    text-align: center;
-}
-
-.top-center img {
-    height: 25px;
-}
+.top-left, .top-right { flex: 0 0 auto; }
+.top-center { flex: 1 1 auto; text-align: center; }
+.top-center img { height: 25px; }
 
 /* --- SECTIONS --- */
 .section {
-    padding: 60px 20px;
+    padding: 60px 5vw; /* use vw for flexible horizontal spacing */
     width: 100vw;
     box-sizing: border-box;
 }
-
-.section.white {
-    background: #ffffff;
-}
-
-.section.black {
-    background: #111;
-    color: #fff;
-}
-
-.section.black p {
-    color: #ddd;
-}
+.section.white { background: #fff; }
+.section.black { background: #111; color: #fff; }
+.section.black p { color: #ddd; }
 
 /* --- SPLIT LAYOUT --- */
 .split {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    gap: 2vw;
 }
-
-.split.reverse {
-    flex-direction: row-reverse;
-}
+.split.reverse { flex-direction: row-reverse; }
 
 .visual-side, .text-side {
-    flex: 1 1 50%;
+    flex: 1 1 48%; /* nearly half each, with gap */
     box-sizing: border-box;
-    padding: 20px;
+    min-width: 300px; /* ensures no collapse */
 }
 
 .visual-box {
     width: 100%;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-.section.black .visual-box {
-    background: #1a1a1a;
-}
+.section.black .visual-box { background: #111; }
 
-/* --- FULL-WIDTH VISUAL --- */
+/* --- FULL WIDTH VISUAL --- */
 .full-visual {
-    width: 100vw;
-    padding: 20px 0;
+    width: 100%;
+    padding: 0;
+    margin: 40px 0;
     box-sizing: border-box;
 }
-
-.flourish-embed {
-    width: 100%;
-}
+.flourish-embed { width: 100%; height: 600px; }
 
 /* --- REVEAL ANIMATION --- */
 .reveal {
@@ -142,22 +83,17 @@ p {
     transform: translateY(30px);
     transition: all 0.9s ease;
 }
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* --- MOBILE --- */
 @media (max-width: 900px) {
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.4em; }
-    .split { flex-direction: column; }
-    .visual-side, .text-side { flex: 1 1 100%; padding: 10px; }
+    .split { flex-direction: column; gap: 20px; }
+    .visual-side, .text-side { flex: 1 1 100%; }
 }
 </style>
 </head>
-
 <body>
 
 <div class="top-bar">
