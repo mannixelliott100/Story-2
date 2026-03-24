@@ -13,6 +13,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fafafa;
     color: #222;
+    padding-top: 40px; /* FIXED: prevents header overlap */
 }
 
 /* --- CONTAINER --- */
@@ -22,7 +23,7 @@ body {
     padding: 60px 20px;
 }
 
-/* --- HEADINGS (NOW BLUE) --- */
+/* --- HEADINGS --- */
 h1, h2 {
     color: #1e66ff;
     font-weight: 700;
@@ -54,7 +55,7 @@ p {
     color: #444;
 }
 
-/* --- IMPROVED FIRST PARAGRAPH --- */
+/* --- HERO TEXT --- */
 .hero-text {
     font-size: 1.15em;
     line-height: 1.8;
@@ -81,24 +82,21 @@ p {
     color: #ddd;
 }
 
-/* --- FLEX LAYOUT --- */
+/* --- FLEX LAYOUT (FIXED) --- */
 .split {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    flex-wrap: wrap; /* FIX */
 }
 
 .split.reverse {
     flex-direction: row-reverse;
 }
 
-.text-side {
-    flex: 1;
-}
-
-.visual-side {
-    flex: 1;
+.text-side, .visual-side {
+    flex: 1 1 400px; /* FIX */
 }
 
 /* --- VISUAL STYLING --- */
@@ -146,7 +144,7 @@ p {
     }
 }
 
-/* === ADDED HEADER STYLES === */
+/* --- HEADER --- */
 .top-bar {
     position: fixed;
     top: 10px;
@@ -178,15 +176,16 @@ p {
 
 <body>
 
-<!-- === ADDED HEADER === -->
 <div class="top-bar">
     <div class="top-left">202226944</div>
-  <div class="top-center">
-    <a href="https://www.strath.ac.uk" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
-    </a>
-</div>   
- <div class="top-right">STORY 2</div>
+
+    <div class="top-center">
+        <a href="https://www.strath.ac.uk" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
+        </a>
+    </div>
+
+    <div class="top-right">STORY 2</div>
 </div>
 
 <!-- HERO -->
