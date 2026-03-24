@@ -6,20 +6,17 @@
 <title>Women’s Wrestling Story</title>
 
 <style>
+/* --- GLOBAL --- */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background: #fafafa;
     color: #222;
-    padding-top: 40px;
+    padding-top: 50px; /* header spacing */
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 2000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
+/* --- HEADINGS --- */
 h1, h2 {
     color: #1e66ff;
     font-weight: 700;
@@ -41,9 +38,8 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* --- PARAGRAPHS --- */
 p {
-    max-width: 750px;
-    margin: 0 auto 25px auto;
     font-size: 1.08em;
     line-height: 1.75;
     color: #444;
@@ -53,12 +49,11 @@ p {
     font-size: 1.15em;
     line-height: 1.8;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
+/* --- SECTIONS --- */
 .section {
-    padding: 60px 20px;
+    padding: 60px 0;
 }
 
 .section.white {
@@ -74,13 +69,14 @@ p {
     color: #ddd;
 }
 
-/* --- FLEX SPLIT SECTIONS --- */
+/* --- SPLIT LAYOUT --- */
 .split {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
     flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 40px;
 }
 
 .split.reverse {
@@ -88,34 +84,38 @@ p {
 }
 
 .text-side, .visual-side {
-    flex: 1 1 0;
-    min-width: 0;
+    flex: 1 1 50%;
+    min-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* --- VISUAL STYLING --- */
-.flourish-embed {
-    width: 100%;
-}
-
+/* --- VISUALS --- */
 .visual-box {
-    background: #fff;
+    width: 100%;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-sizing: border-box;
 }
 
 .section.black .visual-box {
     background: #1a1a1a;
 }
 
-/* --- FULL WIDTH VISUAL --- */
 .full-visual {
-    width: 100%;
-    max-width: 100%;
-    margin: 40px 0;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* --- REVEAL --- */
+.flourish-embed {
+    width: 100%;
+}
+
+/* --- REVEAL ANIMATION --- */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -129,46 +129,52 @@ p {
 
 /* --- MOBILE --- */
 @media (max-width: 800px) {
-    .split {
-        flex-direction: column;
-    }
-
     h1 {
         font-size: 2.2em;
     }
+    .split {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .text-side, .visual-side {
+        flex: 1 1 100%;
+        padding: 10px 0;
+    }
 }
 
-/* --- HEADER --- */
+/* --- FIXED HEADER --- */
 .top-bar {
     position: fixed;
-    top: 10px;
+    top: 0;
     left: 0;
     width: 100%;
     font-size: 12px;
     font-family: Arial, sans-serif;
     z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
-.top-left {
-    position: absolute;
-    left: 10px;
+.top-left, .top-right {
+    flex: 0 0 auto;
 }
 
 .top-center {
+    flex: 1 1 auto;
     text-align: center;
-    width: 100%;
 }
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 0;
+.top-center img {
+    height: 25px;
 }
 </style>
 </head>
 
 <body>
-
 <div class="top-bar">
     <div class="top-left">202226944</div>
     <div class="top-center">
