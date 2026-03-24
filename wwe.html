@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #fafafa;
+    background: #fff; /* base page background */
     color: #222;
 }
 
@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 60px 0;
+    box-sizing: border-box;
 }
 
 .section.white { background: #fff; color: #222; }
@@ -57,7 +58,7 @@ p {
     margin: 0 auto 25px auto;
 }
 
-/* SPLIT SECTIONS */
+/* SPLIT SECTIONS FULL WIDTH VISUALS */
 .split {
     display: flex;
     width: 100%;
@@ -69,7 +70,6 @@ p {
 .text-side {
     flex: 1 1 50%;
     padding: 40px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,10 +83,12 @@ p {
     align-items: center;
 }
 
-/* VISUAL BOX */
-.visual-box, .full-visual {
+.visual-side .flourish-embed,
+.visual-side .visual-box,
+.full-visual {
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    max-width: none;
 }
 
 /* FULL WIDTH VISUALS */
@@ -136,13 +138,10 @@ p {
 <div class="section white reveal">
     <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
     <p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal, being responsible for much of the legendary trivia at wrestling’s foundational roots. This would lay the groundwork for stars to take the sport into the 21st century like John Cena, becoming a household name and growing the industry massively as we entered the digital age.
+Over the last 40 years, professional wrestling has become a global phenomenon. Icons like Hulk Hogan, Stone Cold Steve Austin, and The Rock brought wrestling into the mainstream, paving the way for stars like John Cena in the 21st century.
     </p>
     <p>
-However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025. This revolution would see all different types of women be featured much more prominently, being valued for their talents and unique character rather than looks and being positioned as main event talents rather than undercard acts.
-    </p>
-    <p>
-This article will cover changes in the WWE (World Wrestling Entertainment) and recently created AEW (All-Elite Wrestling).
+Women’s wrestling remained underrepresented through the 90’s and 2000’s, often objectified and limited in screen time. The early 2010s saw the creation of all-female divisions, culminating in the WWE “Women’s Revolution” of 2025, which finally positioned women as main-event talents.
     </p>
 </div>
 
@@ -151,7 +150,7 @@ This article will cover changes in the WWE (World Wrestling Entertainment) and r
     <div class="flourish-embed flourish-chart" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- SPLIT VISUAL 2 -->
+<!-- SPLIT VISUAL 2 LEFT -->
 <div class="section white reveal">
     <div class="split">
         <div class="visual-side visual-box">
@@ -159,21 +158,18 @@ This article will cover changes in the WWE (World Wrestling Entertainment) and r
         </div>
         <div class="text-side">
             <p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company. At the beginning of 2016 there were 39 signed female wrestlers and in 2026 there are 67 signed. This shows a nearly 79% increase. This increase comes from a demand for a bigger roster and deeper female divisions as interest has grown from the new age of female stars.
-            </p>
-            <p>
-During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed to rival the WWE’s longstanding monopoly on the wrestling industry. With this came the development of its own women’s division being properly formed around June, seeing a steady increase from 14 signed women in 2019 to 56 in 2026. This shows a 300% increase in signed female talent across 7 years in AEW.
+Since 2015, WWE female roster increased from 39 to 67 wrestlers by 2026. AEW launched in 2019 with its women’s division increasing from 14 to 56 in 2026.
             </p>
         </div>
     </div>
 </div>
 
-<!-- SPLIT VISUAL 3 BLACK BACKGROUND REVERSE -->
+<!-- SPLIT VISUAL 3 BLACK RIGHT -->
 <div class="section black reveal">
     <div class="split reverse">
         <div class="text-side">
             <p>
-Female stars were few and far between in the late 90’s and early 2000’s, however despite the lack of exposure quite a few broke into the main event scene. Trish Stratus, Lita and Chyna existed in an era defined by male domination yet managed to break out and lay the very early foundations as to what women’s wrestling would become today. Here is a carousel of the female wrestling icons who defined their generations and were crucial in the growth of the women’s division.
+Female stars like Trish Stratus, Lita, and Chyna laid the foundations for modern women’s wrestling despite the male-dominated era of the 90s and 2000s.
             </p>
         </div>
         <div class="visual-side visual-box">
@@ -187,7 +183,7 @@ Female stars were few and far between in the late 90’s and early 2000’s, how
     <div class="flourish-embed flourish-chart" data-src="visualisation/28085202"></div>
 </div>
 
-<!-- SPLIT VISUAL 5 -->
+<!-- SPLIT VISUAL 5 LEFT -->
 <div class="section white reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -195,18 +191,18 @@ Female stars were few and far between in the late 90’s and early 2000’s, how
         </div>
         <div class="text-side">
             <p>
-Despite the newly found star power and expansion of women’s wrestling across multiple WWE brands and other organisations like AEW’s (All Elite Wrestling), there is inequality between men and women. This icon graph shows the percentage difference in the volume of signed WWE with only 33% of signed talent being women as of 2026.
+Despite growth in women’s wrestling, only 33% of WWE talent is female as of 2026.
             </p>
         </div>
     </div>
 </div>
 
-<!-- SPLIT VISUAL 6 -->
+<!-- SPLIT VISUAL 6 RIGHT -->
 <div class="section white reveal">
     <div class="split">
         <div class="text-side">
             <p>
-Within AEW, this divide is even larger with only 24% of women being signed to the roster which is 52 women in comparison to 163 men as of 2026. These stats come from the Smackdown Hotel Roster Database.
+Within AEW, women make up only 24% of the roster in 2026, highlighting ongoing inequality.
             </p>
         </div>
         <div class="visual-side visual-box">
@@ -215,7 +211,7 @@ Within AEW, this divide is even larger with only 24% of women being signed to th
     </div>
 </div>
 
-<!-- SPLIT VISUAL 7 BLACK BACKGROUND -->
+<!-- SPLIT VISUAL 7 BLACK LEFT -->
 <div class="section black reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -223,13 +219,13 @@ Within AEW, this divide is even larger with only 24% of women being signed to th
         </div>
         <div class="text-side">
             <p>
-This inequality is also revealed not just within their roster’s ratio of men and women but also the difference in total matches and appearances. Data from Wrestletalk shows the large percentage difference of matches and on-screen appearances between men and women over 6 months of 2023...
+Inequality is evident in match appearances and total screen time for women across WWE and AEW.
             </p>
         </div>
     </div>
 </div>
 
-<!-- SPLIT VISUAL 8 -->
+<!-- SPLIT VISUAL 8 RIGHT -->
 <div class="section white reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -237,18 +233,18 @@ This inequality is also revealed not just within their roster’s ratio of men a
         </div>
         <div class="text-side">
             <p>
-Additionally, the stagnation of progress has also become apparent within the last few years as in AEW there has been a halt in the increase of women in ring match time...
+AEW shows stagnation in women’s ring time, with minimal growth from 2022 to 2025.
             </p>
         </div>
     </div>
 </div>
 
-<!-- SPLIT VISUAL 9 BLACK BACKGROUND -->
+<!-- SPLIT VISUAL 9 BLACK RIGHT -->
 <div class="section black reveal">
     <div class="split">
         <div class="text-side">
             <p>
-WhatCulture report that women’s matches in 2022 had an average of 7 minutes and 59 seconds, yet only increased to 8 minutes and 1 second in 2023 and has remained the same through to 2025. This trend suggests a complacency currently towards further female progress.
+Women’s match times remain largely unchanged, reflecting slow progress in AEW.
             </p>
         </div>
         <div class="visual-side visual-box">
