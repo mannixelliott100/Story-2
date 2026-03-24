@@ -6,21 +6,15 @@
 <title>Women’s Wrestling Story</title>
 
 <style>
-/* RESET AND BODY */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* === BASIC BODY === */
 body {
+    margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #fff;
+    background: #fafafa;
     color: #222;
-    line-height: 1.7;
 }
 
-/* TOP BAR */
+/* === TOP BAR === */
 .top-bar {
     position: fixed;
     top: 10px;
@@ -29,91 +23,97 @@ body {
     font-size: 12px;
     font-family: Arial, sans-serif;
     z-index: 9999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
 }
 
-.top-center img {
-    height: 25px;
-}
+.top-left { position: absolute; left: 10px; }
+.top-center { text-align: center; width: 100%; }
+.top-right { position: absolute; right: 10px; top: 0; }
 
-/* SECTIONS */
+/* === SECTIONS === */
 .section {
     width: 100%;
-    min-height: 100vh;
+    padding: 60px 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.section.white { background: #fff; color: #222; }
+.section.white { background: #fff; }
 .section.black { background: #111; color: #fff; }
+
 .section.black p { color: #ddd; }
 
-/* SPLIT LAYOUT */
+/* === HERO TITLES === */
+h1, h2 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+h1 { font-size: 3em; color: #1e66ff; font-weight: 700; }
+h2 { font-size: 1.8em; color: #1e66ff; margin-bottom: 40px; }
+
+/* === TEXT === */
+p {
+    font-size: 1.1em;
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+}
+
+/* === FULL WIDTH SPLIT === */
 .split {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100%;
-    flex-wrap: nowrap;
 }
 
-.split.reverse { flex-direction: row-reverse; }
+.split.reverse {
+    flex-direction: row-reverse;
+}
 
-.text-side, .visual-side {
+.text-side {
+    flex: 1 1 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.visual-side {
     flex: 1 1 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 40px;
-}
-
-/* FULL-SIZE VISUALS */
-.visual-side {
-    width: 100%;
-    height: 100%;
-}
-
-.visual-side .flourish-embed {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 80vh;
-}
-
-/* HERO TEXT */
-.hero-text {
-    text-align: center;
-    max-width: 900px;
-    font-size: 1.2em;
-    padding: 60px;
-}
-
-/* HEADINGS */
-h1, h2 {
-    text-align: center;
-    margin: 20px 0;
-}
-
-h1 { font-size: 3em; }
-h2 { font-size: 2em; }
-
-/* REMOVE CONSTRAINTS */
-.container {
-    max-width: none;
-    padding: 0;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .visual-box {
-    padding: 0;
-    margin: 0;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* ANIMATION */
+.visual-box iframe, 
+.visual-box .flourish-embed {
+    width: 100%;
+    height: 100%;
+}
+
+/* === FULL WIDTH VISUALS === */
+.full-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.full-visual .flourish-embed {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* === ANIMATION === */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -125,18 +125,15 @@ h2 { font-size: 2em; }
     transform: translateY(0);
 }
 
-/* RESPONSIVE */
-@media (max-width: 1000px) {
+/* === RESPONSIVE === */
+@media(max-width: 900px) {
     .split {
         flex-direction: column;
     }
     .text-side, .visual-side {
-        width: 100%;
-        padding: 20px;
+        flex: 1 1 100%;
+        padding: 10px;
     }
-    .visual-side .flourish-embed { min-height: 60vh; }
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.6em; }
 }
 </style>
 </head>
@@ -145,113 +142,129 @@ h2 { font-size: 2em; }
 
 <!-- TOP BAR -->
 <div class="top-bar">
-    <div>202226944</div>
+    <div class="top-left">202226944</div>
     <div class="top-center">
         <a href="https://www.strath.ac.uk" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
         </a>
     </div>
-    <div>STORY 2</div>
+    <div class="top-right">STORY 2</div>
 </div>
 
 <!-- HERO SECTION -->
 <div class="section white reveal">
-    <div class="hero-text">
-        <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
-        <p>
-Over the last 40 years, professional wrestling has grown into a worldwide phenomenon. Icons like Hulk Hogan, Stone Cold, and The Rock brought wrestling into mainstream popularity, setting the stage for stars like John Cena in the 21st century.
-        </p>
-        <p>
-Female wrestlers were often misrepresented until the 2010s, when an all-female division emerged and eventually led to “The Women’s Revolution” of 2025, valuing talent and character over looks, positioning women as main-event stars.
-        </p>
-    </div>
+    <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
+    <p>
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon...
+    </p>
 </div>
 
 <!-- TIMELINE VISUAL -->
-<div class="section white reveal">
-    <div class="visual-side full-width">
-        <div class="flourish-embed" data-src="visualisation/28024773"></div>
-    </div>
+<div class="section white reveal full-visual">
+    <div class="flourish-embed" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- VISUAL 2 - WHITE -->
+<!-- SPLIT VISUAL + TEXT -->
 <div class="section white reveal">
     <div class="split reverse">
-        <div class="visual-side full-width">
+        <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/27677179"></div>
         </div>
         <div class="text-side">
             <p>
-Since the 2015 “Women’s Revolution,” WWE has seen a steadily positive increase in female talent, growing from 39 signed women in 2016 to 67 in 2026 — nearly 79% increase.
+Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase...
             </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 3 - BLACK -->
+<!-- BLACK BACKGROUND SPLIT -->
 <div class="section black reveal">
     <div class="split">
+        <div class="visual-side visual-box">
+            <div class="flourish-embed" data-src="visualisation/28122283"></div>
+        </div>
         <div class="text-side">
             <p>
-In 2019, AEW was formed to rival WWE’s monopoly, developing its own women’s division which grew from 14 to 56 signed women by 2026 — a 300% increase over 7 years.
+During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed...
             </p>
-        </div>
-        <div class="visual-side full-width">
-            <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 4 -->
-<div class="section white reveal">
-    <div class="visual-side full-width">
+<!-- FULL VISUAL SECTION -->
+<div class="section white reveal full-visual">
+    <div class="visual-box">
         <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
 
-<!-- VISUAL 5 -->
+<!-- ADDITIONAL SPLIT SECTIONS (TEXT + VISUAL) -->
 <div class="section white reveal">
     <div class="split">
-        <div class="visual-side full-width">
+        <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/28087074"></div>
         </div>
         <div class="text-side">
             <p>
-Athletes like Rhea Ripley became worldwide stars, reflecting a boom in women’s wrestling post-2020. Social media shows 7 of the top-followed wrestlers in 2026 are women.
+In the 2020’s, athletes like Rhea Ripley have broken out...
             </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 6 - BLACK -->
-<div class="section black reveal">
+<div class="section white reveal">
     <div class="split reverse">
-        <div class="visual-side full-width">
+        <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/27918499"></div>
         </div>
         <div class="text-side">
             <p>
-Despite growth, inequality persists: only 33% of WWE signed talent are women in 2026.
+However, despite the newly found star power...
             </p>
         </div>
     </div>
 </div>
 
-<!-- VISUAL 7 - BLACK -->
 <div class="section black reveal">
     <div class="split">
-        <div class="visual-side full-width">
+        <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/28122168"></div>
         </div>
         <div class="text-side">
             <p>
-AEW shows an even larger divide: only 24% of signed talent are women (52 women vs 163 men) as of 2026.
+Within AEW, this divide is even larger...
             </p>
         </div>
     </div>
 </div>
 
-<!-- SCRIPT -->
+<div class="section white reveal">
+    <div class="split reverse">
+        <div class="visual-side visual-box">
+            <div class="flourish-embed" data-src="visualisation/28079741"></div>
+        </div>
+        <div class="text-side">
+            <p>
+This inequality is also revealed not just within their roster’s ratio...
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section black reveal">
+    <div class="split">
+        <div class="visual-side visual-box">
+            <div class="flourish-embed" data-src="visualisation/28084586"></div>
+        </div>
+        <div class="text-side">
+            <p>
+Additionally, the stagnation of progress has also become apparent...
+            </p>
+        </div>
+    </div>
+</div>
+
 <script src="https://public.flourish.studio/resources/embed.js"></script>
 <script>
 const observer = new IntersectionObserver(entries => {
