@@ -14,10 +14,7 @@ body {
     padding-top: 40px;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 20px;
+
 }
 
 h1, h2 {
