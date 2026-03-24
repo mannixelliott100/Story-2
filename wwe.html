@@ -12,7 +12,7 @@ body {
     background: #fafafa;
     color: #222;
     padding-top: 50px;
-    overflow-x: hidden;
+    overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 h1, h2 { color: #1e66ff; font-weight: 700; }
@@ -36,7 +36,7 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
 
 /* --- SECTIONS --- */
 .section {
-    padding: 60px 5vw; /* use vw for flexible horizontal spacing */
+    padding: 60px 5vw; /* horizontal spacing with viewport units */
     width: 100vw;
     box-sizing: border-box;
 }
@@ -49,19 +49,24 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    gap: 2vw;
+    gap: 2vw; /* space between columns */
+    justify-content: flex-start; /* align to left */
+    align-items: flex-start;
 }
 .split.reverse { flex-direction: row-reverse; }
 
 .visual-side, .text-side {
-    flex: 1 1 48%; /* nearly half each, with gap */
+    flex: 1 1 48%; /* each takes ~half width */
     box-sizing: border-box;
-    min-width: 300px; /* ensures no collapse */
+    min-width: 300px; /* prevents collapsing */
+    margin: 0; /* remove centering */
 }
 
-.visual-box {
+.visual-box, .full-visual {
     width: 100%;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
     border-radius: 0;
     box-shadow: none;
 }
@@ -69,20 +74,11 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
 .section.black .visual-box { background: #111; }
 
 /* --- FULL WIDTH VISUAL --- */
-.full-visual {
-    width: 100%;
-    padding: 0;
-    margin: 40px 0;
-    box-sizing: border-box;
-}
+.full-visual { width: 100%; padding: 0; margin: 40px 0; }
 .flourish-embed { width: 100%; height: 600px; }
 
 /* --- REVEAL ANIMATION --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.9s ease;
-}
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* --- MOBILE --- */
@@ -94,6 +90,7 @@ p { font-size: 1.08em; line-height: 1.75; color: #444; margin-bottom: 25px; }
 }
 </style>
 </head>
+
 <body>
 
 <div class="top-bar">
@@ -128,7 +125,7 @@ This article will cover changes in the WWE (World Wrestling Entertainment) and r
     </div>
 </div>
 
-<!-- Split Sections with all paragraphs -->
+<!-- Split Sections -->
 <div class="section white reveal">
     <div class="split">
         <div class="visual-side visual-box">
@@ -268,5 +265,3 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 </body>
 </html>
-  
-
