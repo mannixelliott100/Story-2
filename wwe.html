@@ -32,14 +32,13 @@ body {
 /* === SECTIONS === */
 .section {
     width: 100%;
-    padding: 60px 20px;
+    padding: 60px 0;
     display: flex;
     flex-direction: column;
 }
 
 .section.white { background: #fff; }
 .section.black { background: #111; color: #fff; }
-
 .section.black p { color: #ddd; }
 
 /* === HERO TITLES === */
@@ -59,42 +58,41 @@ p {
     margin: 0 auto 25px auto;
 }
 
-/* === FULL WIDTH SPLIT === */
+/* === SPLIT SECTIONS === */
 .split {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
+    flex-wrap: wrap;
 }
 
-.split.reverse {
-    flex-direction: row-reverse;
-}
+.split.reverse { flex-direction: row-reverse; }
 
 .text-side {
     flex: 1 1 50%;
-    padding: 20px;
+    padding: 40px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .visual-side {
     flex: 1 1 50%;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .visual-box {
     width: 100%;
     height: 100%;
-    background: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.visual-box iframe, 
+.visual-box iframe,
 .visual-box .flourish-embed {
     width: 100%;
     height: 100%;
@@ -132,12 +130,11 @@ p {
     }
     .text-side, .visual-side {
         flex: 1 1 100%;
-        padding: 10px;
+        padding: 20px;
     }
 }
 </style>
 </head>
-
 <body>
 
 <!-- TOP BAR -->
@@ -155,16 +152,16 @@ p {
 <div class="section white reveal">
     <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
     <p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon...
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture...
     </p>
 </div>
 
-<!-- TIMELINE VISUAL -->
+<!-- TIMELINE FULL WIDTH -->
 <div class="section white reveal full-visual">
     <div class="flourish-embed" data-src="visualisation/28024773"></div>
 </div>
 
-<!-- SPLIT VISUAL + TEXT -->
+<!-- SPLIT: VISUAL LEFT / TEXT RIGHT -->
 <div class="section white reveal">
     <div class="split reverse">
         <div class="visual-side visual-box">
@@ -172,34 +169,34 @@ Over the last 40 years, the world of professional wrestling has grown into a wor
         </div>
         <div class="text-side">
             <p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase...
+Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company...
             </p>
         </div>
     </div>
 </div>
 
-<!-- BLACK BACKGROUND SPLIT -->
+<!-- SPLIT: BLACK BACKGROUND, TEXT LEFT / VISUAL RIGHT -->
 <div class="section black reveal">
     <div class="split">
+        <div class="text-side">
+            <p>
+During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed to rival the WWE’s longstanding monopoly...
+            </p>
+        </div>
         <div class="visual-side visual-box">
             <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
-        <div class="text-side">
-            <p>
-During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed...
-            </p>
-        </div>
     </div>
 </div>
 
-<!-- FULL VISUAL SECTION -->
+<!-- FULL WIDTH VISUAL -->
 <div class="section white reveal full-visual">
     <div class="visual-box">
         <div class="flourish-embed" data-src="visualisation/28085202"></div>
     </div>
 </div>
 
-<!-- ADDITIONAL SPLIT SECTIONS (TEXT + VISUAL) -->
+<!-- ADDITIONAL SPLIT SECTIONS -->
 <div class="section white reveal">
     <div class="split">
         <div class="visual-side visual-box">
@@ -207,7 +204,7 @@ During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was f
         </div>
         <div class="text-side">
             <p>
-In the 2020’s, athletes like Rhea Ripley have broken out...
+In the 2020’s, athletes like Rhea Ripley have broken out into a new level of audience as a worldwide international star...
             </p>
         </div>
     </div>
@@ -220,7 +217,7 @@ In the 2020’s, athletes like Rhea Ripley have broken out...
         </div>
         <div class="text-side">
             <p>
-However, despite the newly found star power...
+However, despite the newly found star power and expansion of women’s wrestling across multiple WWE brands...
             </p>
         </div>
     </div>
@@ -233,7 +230,7 @@ However, despite the newly found star power...
         </div>
         <div class="text-side">
             <p>
-Within AEW, this divide is even larger...
+Within AEW, this divide is even larger with only 24% of women being signed to the roster...
             </p>
         </div>
     </div>
@@ -246,7 +243,7 @@ Within AEW, this divide is even larger...
         </div>
         <div class="text-side">
             <p>
-This inequality is also revealed not just within their roster’s ratio...
+This inequality is also revealed not just within their roster’s ratio of men and women...
             </p>
         </div>
     </div>
@@ -259,7 +256,7 @@ This inequality is also revealed not just within their roster’s ratio...
         </div>
         <div class="text-side">
             <p>
-Additionally, the stagnation of progress has also become apparent...
+Additionally, the stagnation of progress has also become apparent within the last few years...
             </p>
         </div>
     </div>
