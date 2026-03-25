@@ -30,7 +30,7 @@ p {
 .section {
     width: 100%;
     padding: 60px 0;
-    box-sizing: border-box;
+   
 }
 
 .section.white { background: #fff; color: #222; }
@@ -62,7 +62,7 @@ p {
 .full-visual .flourish-embed {
     width: 100%;
     height: 100%;
-    max-width: none;
+    max-width: 100%;
 }
 
 .full-visual {
@@ -83,7 +83,7 @@ p {
     transform: translateY(0);
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1200px) {
     .split, .split.reverse {
         flex-direction: column;
     }
