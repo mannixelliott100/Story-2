@@ -2,107 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Women’s Wrestling Story</title>
 
 <style>
+
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: #fafafa;
-    color: #222;
+    background: #f5f5f5;
 }
 
-h1, h2 {
-    font-weight: 700;
-    margin: 0 0 30px 0;
+/* SECTIONS */
+.section {
+    width: 100%;
+    padding: 80px 0;
 }
 
-h1 { font-size: 3em; text-align: center; }
-h2 { font-size: 1.6em; text-align: center; margin: 40px 0; }
+/* FULL WIDTH CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 40px;
+}
 
+/* BACKGROUNDS */
+.white { background: #fff; }
+.black { background: #111; color: #fff; }
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 800;
+    color: #1e66ff;
+}
+
+/* TEXT */
 p {
     font-size: 1.15em;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin: 0;
 }
 
-.section {
-    width: 100%;
-    padding: 60px 0;
-   
-}
-
-.section.white { background: #fff; color: #222; }
-.section.black { background: #111; color: #fff; }
-.section.black p { color: #ddd; }
-
+/* SPLIT LAYOUT */
 .split {
     display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.split.reverse {
+    flex-direction: row-reverse;
+}
+
+/* FORCE TRUE 50/50 LAYOUT */
+.text, .visual {
+    flex: 1;
+}
+
+/* VISUAL BOX */
+.visual-box {
     width: 100%;
-    flex-wrap: wrap;
-    align-items: stretch;
 }
 
-.split.reverse { flex-direction: row-reverse; }
-
-.text-side, .visual-side {
-    flex: 1 1 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.text-side { font-size: 1.15em; line-height: 1.8; }
-
-.visual-side { padding: 20px; display: flex; align-items: center; justify-content: center; }
-
-.visual-side .flourish-embed, 
-.full-visual .flourish-embed {
+/* FULL WIDTH VISUAL */
+.full-width {
     width: 100%;
-    height: 100%;
-    max-width: 100%;
 }
 
-.full-visual {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
+/* FLOURISH FIX */
+.flourish-embed {
+    width: 100% !important;
 }
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.9s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media(max-width: 1200px) {
-    .split, .split.reverse {
-        flex-direction: column;
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .split {
+        flex-direction: column !important;
     }
-    .text-side, .visual-side { flex: 1 1 100%; padding: 20px; }
 }
 
+/* HEADER */
 .top-bar {
     position: fixed;
     top: 10px;
     left: 0;
     width: 100%;
     font-size: 12px;
-    font-family: Arial, sans-serif;
     z-index: 9999;
 }
 
 .top-left { position: absolute; left: 10px; }
 .top-center { text-align: center; width: 100%; }
-.top-right { position: absolute; right: 10px; top: 0; }
+.top-right { position: absolute; right: 10px; }
+
 </style>
 </head>
 
@@ -111,144 +105,166 @@ p {
 <div class="top-bar">
     <div class="top-left">202226944</div>
     <div class="top-center">
-        <a href="https://www.strath.ac.uk" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
-        </a>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" style="height:25px;">
     </div>
     <div class="top-right">STORY 2</div>
 </div>
 
-<!-- Hero Section -->
-<div class="section white reveal">
-    <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
-    <p>
-Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture. Icons throughout the 80’s and 90’s like Hulk Hogan, Stone Cold Steve Austin and The Rock took the industry into the mainstream appeal, being responsible for much of the legendary trivia at wrestling’s foundational roots. This would lay the groundwork for stars to take the sport into the 21st century like John Cena, becoming a household name and growing the industry massively as we entered the digital age.
-
-However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented. We would see this become a recurring theme throughout the 90’s and early 2000’s with women being often objectified and receiving little match time. Women would often be valued for looks rather than in ring talent and match quality, leading to many stereotyped and misogynistic storylines. This would see a turn in the early 2010’s where an all-female division would be created to expand the WWE roster before its complete overall in “The Women’s Revolution” of 2025. This revolution would see all different types of women be featured much more prominently, being valued for their talents and unique character rather than looks and being positioned as main event talents rather than undercard acts.
-
-This article will cover changes in the WWE (World Wrestling Entertainment) and recently created AEW (All-Elite Wrestling).
-    </p>
+<!-- TITLE -->
+<div class="section white">
+    <div class="container">
+        <h1 class="title">Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
+    </div>
 </div>
 
-<!-- VISUAL 1 Full Screen -->
-<div class="section white reveal full-visual">
-    <div class="flourish-embed" data-src="visualisation/28024773"></div>
+<!-- INTRO -->
+<div class="section white">
+    <div class="container">
+        <p>
+Over the last 40 years, the world of professional wrestling has grown into a worldwide phenomenon which now exists as a significant part of pop culture...
+        </p>
+        <p>
+However, as the industry grew and evolved it remained centrally focused on its male talent where female wrestlers would be constantly undermined and misrepresented...
+        </p>
+    </div>
 </div>
 
-<!-- VISUAL 2 Split Left Visual -->
-<div class="section white reveal">
-    <div class="split">
-        <div class="visual-side">
+<!-- VIS 1 FULL -->
+<div class="section white">
+    <div class="container">
+        <div class="visual-box full-width">
+            <div class="flourish-embed" data-src="visualisation/28024773"></div>
+        </div>
+    </div>
+</div>
+
+<!-- VIS 2 LEFT / TEXT RIGHT -->
+<div class="section white">
+    <div class="container split">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/27677179"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-Since the 2015 “Women’s Revolution” the WWE has seen a steadily positive increase in the amount of female talent signed to the company. It is found that at the beginning of 2016 there were 39 signed female wrestlers and now in 2026 there are now 67 signed. This shows a nearly 79% increase. These stats come from the Smackdown Hotel Roster Database.
+Since the 2015 Women’s Revolution the WWE has seen a steadily positive increase...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 3 Black Background, Right Visual -->
-<div class="section black reveal">
-    <div class="split reverse">
-        <div class="visual-side">
+<!-- VIS 3 BLACK TEXT LEFT -->
+<div class="section black">
+    <div class="container split reverse">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/28122283"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-During this boom of women’s wrestling, in 2019 All Elite Wrestling (AEW) was formed to rival the WWE’s longstanding monopoly on the wrestling industry. Its women’s division increased from 14 signed women in 2019 to 56 in 2026, showing a 300% growth over 7 years. These stats come from the Smackdown Hotel Roster Database.
+During this boom of women’s wrestling, in 2019 AEW was formed...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 4 Full Screen -->
-<div class="section white reveal full-visual">
-    <div class="flourish-embed" data-src="visualisation/28085202"></div>
+<!-- VIS 4 FULL -->
+<div class="section white">
+    <div class="container">
+        <div class="flourish-embed full-width" data-src="visualisation/28085202"></div>
+    </div>
 </div>
 
-<!-- VISUAL 5 Split Left Visual -->
-<div class="section white reveal">
-    <div class="split">
-        <div class="visual-side">
+<!-- VIS 5 LEFT -->
+<div class="section white">
+    <div class="container split">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/28087074"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-In the 2020s, athletes like Rhea Ripley have broken out into a new level of audience as worldwide stars. A massive wrestling boom took place over 2021–2023. This is reflected in social media where 7 of the most followed active wrestlers are women as of 2026.
+In the 2020’s, athletes like Rhea Ripley have broken out...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 6 Split Right Visual -->
-<div class="section white reveal">
-    <div class="split reverse">
-        <div class="visual-side">
+<!-- VIS 6 RIGHT -->
+<div class="section white">
+    <div class="container split reverse">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/27918499"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-Despite expansion, only 33% of WWE talent are women in 2026. AEW only has 24% female talent. Inequality persists.
+However, despite the newly found star power there is inequality...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 7 Black Split -->
-<div class="section black reveal">
-    <div class="split">
-        <div class="visual-side">
+<!-- VIS 7 BLACK LEFT -->
+<div class="section black">
+    <div class="container split">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/28122168"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-Inequality is evident in roster ratios and match appearances, with women receiving fewer matches and less screen time across WWE and AEW.
+Within AEW, this divide is even larger...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 8 Split Right -->
-<div class="section white reveal">
-    <div class="split reverse">
-        <div class="visual-side">
+<!-- VIS 8 RIGHT -->
+<div class="section white">
+    <div class="container split reverse">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/28079741"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-AEW shows stagnation in women’s ring match time from 2022–2025, reflecting complacency towards female progress.
+This inequality is also revealed in match appearances...
             </p>
         </div>
+
     </div>
 </div>
 
-<!-- VISUAL 9 Black Split -->
-<div class="section black reveal">
-    <div class="split">
-        <div class="visual-side">
+<!-- VIS 9 BLACK LEFT -->
+<div class="section black">
+    <div class="container split">
+
+        <div class="visual">
             <div class="flourish-embed" data-src="visualisation/28084586"></div>
         </div>
-        <div class="text-side">
+
+        <div class="text">
             <p>
-Women’s matches remain largely unchanged in duration, showing slow progress in AEW.
+Additionally, the stagnation of progress has become apparent...
             </p>
         </div>
+
     </div>
 </div>
 
 <script src="https://public.flourish.studio/resources/embed.js"></script>
-<script>
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.2 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
