@@ -18,13 +18,6 @@ body {
     padding: 80px 0;
 }
 
-/* FULL WIDTH CONTAINER */
-.container {
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 0 40px;
-}
 
 /* BACKGROUNDS */
 .white { background: #fff; }
