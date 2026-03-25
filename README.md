@@ -160,19 +160,21 @@ p {
 </head>
 
 <body>
-
 <div class="top-bar">
     <div class="top-left">202226944</div>
+
     <div class="top-center">
         <a href="https://www.strath.ac.uk" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/21/University_of_Strathclyde_Coat_of_Arms.svg/1280px-University_of_Strathclyde_Coat_of_Arms.svg.png" alt="Strathclyde Logo" style="height: 25px;">
         </a>
     </div>
+
     <div class="top-right">
-    <a href="https://mannixelliott100.github.io/Story-1/" target="_blank" style="text-decoration: none; color: inherit;">
-        STORY 1
-    </a>
-</div>
+        <a href="https://mannixelliott100.github.io/Story-1/" target="_blank" style="text-decoration: none; color: inherit;">
+            STORY 1
+        </a>
+    </div>
+</div> 
 
 <div class="section white reveal">
     <h1>Story 2 – The Rise of Women’s Wrestling in the 21st Century</h1>
